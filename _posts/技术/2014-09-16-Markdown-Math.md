@@ -34,6 +34,8 @@ Markdown文件的易读性却因此下降了很多。
 
 $h(x) = \theta_0 + \theta_1 x$
 
+$$h(x) = \theta_0 + \theta_1 x$$
+
 $$
 \theta_i = \theta_i - \alpha\frac\partial{\partial\theta_i}J(\theta)
 $$
