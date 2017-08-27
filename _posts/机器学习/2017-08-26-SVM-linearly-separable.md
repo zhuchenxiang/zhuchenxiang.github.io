@@ -1,6 +1,6 @@
 ---
 layout: post
-title: SVM-1：线性可分
+title: SVM：线性可分
 category: 机器学习
 tags: SVM
 keywords: SVM 机器学习

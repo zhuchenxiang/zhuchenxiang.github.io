@@ -1,6 +1,6 @@
 ---
 layout: post
-title: SVM-2：非线性
+title: SVM：非线性
 category: 机器学习
 tags: SVM
 keywords: SVM 机器学习

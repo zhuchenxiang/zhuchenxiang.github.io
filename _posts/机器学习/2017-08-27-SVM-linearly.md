@@ -1,6 +1,6 @@
 ---
 layout: post
-title: SVM-2：线性
+title: SVM：线性
 category: 机器学习
 tags: SVM
 keywords: SVM 机器学习
@@ -31,10 +31,11 @@ $min_{w,b,\xi}\frac{1}{2}||\vec{w}||^2 + \gamma\sum_{i=1}^{n}\xi_i $
 约束 $c_i(\vec{w}\vec{x_i}+b)\ge1-\xi_i$  
      $\xi_i\ge0$
 
-##拉格朗日函数
+## 拉格朗日函数
 原函数 $L(\vec{w},b,\alpha) = \frac{1}{2}||\vec{w}||^2 - \sum_{i=1}^{n}\alpha_i(c_i(\vec{w}.\vec{x_i}+b)-1)$
 
-$\Longrightarrow$ $L(\vec{w},b,\xi,\alpha,\mu) = \frac{1}{2}||\vec{w}||^2 + \gamma\sum_{i=1}^{n}\xi_i - \sum_{i=1}^{n}\alpha_i(c_i(\vec{w}.\vec{x_i}+b)-1) - \sum_{i=1}^{n}\mu_i\xi_i$
+$\Longrightarrow$ 
+$L(\vec{w},b,\xi,\alpha,\mu) = \frac{1}{2}||\vec{w}||^2 + \gamma\sum_{i=1}^{n}\xi_i - \sum_{i=1}^{n}\alpha_i(c_i(\vec{w}.\vec{x_i}+b)-1) - \sum_{i=1}^{n}\mu_i\xi_i$
 
 ### 按照线性可分步骤  对偶问题 求偏导 代入原L 
 #### 对偶问题
@@ -47,7 +48,7 @@ $\frac{\partial L}{\partial w}=0$ $\Longrightarrow$ $w^\mathsf{T}=\sum_{i=1}^{n}
 $\frac{\partial L}{\partial b}=0$ $\Longrightarrow$ $0=\sum_{i=1}^{n}\alpha_ic_i$ 
 $\frac{\partial L}{\partial \xi}=0$ $\Longrightarrow$ $\gamma - \alpha_i -\mu_i = 0 $ 
 
-####代入值
+#### 代入值
 $L=\sum_{i=1}^{n}\alpha_i - \frac{1}{2}\sum_{ij=1}^{n}\alpha_i\alpha_jc_ic_jx_ix_j $
 
 原问题$max_{\alpha,\mu}L$,对上式$\alpha$求max,同样处理为
