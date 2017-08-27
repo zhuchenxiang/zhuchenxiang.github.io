@@ -28,13 +28,15 @@ Markdown是读写性都非常好的轻量文本编辑语言，这个博客以及
 ### 缺点：
 Markdown文件的易读性却因此下降了很多。
 
+        $h(x) = \theta_0 + \theta_1 x$
+
 ### LaTex 
 - Github 上在线 [Markdown MathJax 编辑器](https://kerzol.github.io/markdown-mathjax/editor.html)
 -  [MathJax 支持的数学符号表](https://mirrors.tuna.tsinghua.edu.cn/CTAN/info/symbols/math/maths-symbols.pdf)
 
-$h(x) = \theta_0 + \theta_1 x$
+ $h(x) = \theta_0 + \theta_1 x$
 
-$$h(x) = \theta_0 + \theta_1 x$$
+ $ h(x) = \theta_0 + \theta_1 x $
 
 $$
 \theta_i = \theta_i - \alpha\frac\partial{\partial\theta_i}J(\theta)
