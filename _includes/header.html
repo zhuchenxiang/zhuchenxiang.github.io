@@ -15,13 +15,34 @@
 <link rel="stylesheet" href="/public/css/base.css">
 <link href="/pages/atom.xml" rel="alternate" title="{{site.title}}" type="application/atom+xml">
 <script type="text/x-mathjax-config">
-  MathJax.Hub.Config({
-    TeX: { equationNumbers: { autoNumber: "AMS" } },
+var mathId = document.getElementById("post-content"); //选择公式识别范围
+MathJax.Hub.Config({
+    showProcessingMessages: false, //关闭js加载过程信息
+    messageStyle: "none", //不显示信息
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX", "output/HTML-CSS"],
     tex2jax: {
-        inlineMath: [['$$$', '$$$'], ['$', '$'], ['\\(', '\\)']],
-        processEscapes: true
+        inlineMath:  [ ["$", "$"] ], //行内公式选择$
+        displayMath: [ ["$$","$$"] ], //段内公式选择$$
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre','code','a'] //避开某些标签
+    },
+    "HTML-CSS": {
+        availableFonts: ["STIX","TeX"], //可选字体
+        showMathMenu: false //关闭右击菜单显示
     }
 });
+MathJax.Hub.Queue(["Typeset",MathJax.Hub,mathId]);
+</script>
+<script data-no-instant>
+InstantClick.on('change', function(isInitialLoad){
+    if (isInitialLoad === false) {
+        if (typeof MathJax !== 'undefined'){
+            var mathId = document.getElementById("post-content");
+            MathJax.Hub.Queue(["Typeset",MathJax.Hub,mathId]);
+        }
+    }
+});
+InstantClick.init();
 </script>
 <script type="text/javascript" src="/public/js/mathjax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
