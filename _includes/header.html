@@ -1,4 +1,4 @@
-<meta charset="utf-8">
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 <title>{{ page.title }} | {{ site.title }}</title>
 <meta name="author" content="{{ site.author.name }}">
 {% if page.keywords %}
@@ -14,35 +14,17 @@
 <link rel="stylesheet" href="/public/js/prettify/prettify.css">
 <link rel="stylesheet" href="/public/css/base.css">
 <link href="/pages/atom.xml" rel="alternate" title="{{site.title}}" type="application/atom+xml">
+<script type="text/javascript" src="/public/js/outliner.js"></script>
 <script type="text/x-mathjax-config">
-var mathId = document.getElementById("post-content"); //选择公式识别范围
-MathJax.Hub.Config({
-    extensions: ["tex2jax.js"],
-    jax: ["input/TeX", "output/HTML-CSS"],
-    tex2jax: {
-        inlineMath:  [ ["$", "$"] ], //行内公式选择$
-        displayMath: [ ["$$","$$"] ], //段内公式选择$$
-        processEscapes: true,
-        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre','code','a'] //避开某些标签
-    },
-    "HTML-CSS": {
-        availableFonts: ["STIX","TeX"], //可选字体
-        showMathMenu: false //关闭右击菜单显示
-    }
-});
-MathJax.Hub.Queue(["Typeset",MathJax.Hub,mathId]);
-</script>
-<script data-no-instant>
-InstantClick.on('change', function(isInitialLoad){
-    if (isInitialLoad === false) {
-        if (typeof MathJax !== 'undefined'){
-            var mathId = document.getElementById("post-content");
-            MathJax.Hub.Queue(["Typeset",MathJax.Hub,mathId]);
+      MathJax.Hub.Config({
+        "HTML-CSS": { extensions: ["handle-floats.js"] },
+        TeX: { equationNumbers: { autoNumber: "AMS" } },
+        tex2jax: {
+            inlineMath: [['$$$', '$$$'], ['$', '$'], ['\\(', '\\)']],
+            processEscapes: true
         }
-    }
-});
-InstantClick.init();
-</script>
+    });
+    </script>
 <script type="text/javascript" src="/public/js/mathjax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 
