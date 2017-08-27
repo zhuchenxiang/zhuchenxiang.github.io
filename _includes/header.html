@@ -32,8 +32,8 @@ MathJax.Hub.Config({
     }
 });
 MathJax.Hub.Queue(["Typeset",MathJax.Hub,mathId]);
+MathJax.Hub.Queue(['Typeset', MathJax.Hub]);
 </script>
-<script src="//cdn.bootcss.com/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 <script data-no-instant>
 InstantClick.on('change', function(isInitialLoad){
     if (isInitialLoad === false) {
@@ -45,4 +45,6 @@ InstantClick.on('change', function(isInitialLoad){
 });
 InstantClick.init();
 </script>
+<script src="//cdn.bootcss.com/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
 
