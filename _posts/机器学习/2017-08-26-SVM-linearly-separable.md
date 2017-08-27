@@ -13,7 +13,7 @@ description:
     平面上有两种颜色(红色,蓝色)的点，如果用一条线可以完美的分开它们,即平面上的点线性可分。
     分开两种颜色的直线，有多种画法。SVM就是在无数条可以分类的直线中选择一条最佳的，这条直线距离两个类别最近点，都一样远。  
     而距离这分界线最近的点，就是Support  vector。这些vectors（点点）support了这条线，如果去掉这些点，分界线多半需要改变位置。
-![1](E:\zhu_project\zhuchenxiang.github.io\public\img\machineL\svm/p_01.png)
+![1](/public/img/machineL/svm/p_01.png)
 
 ### 超平面
     平面上有两种颜色的球，用一条线分开它们。
