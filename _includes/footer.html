@@ -20,6 +20,26 @@
     $('a[href="#{{ site.active }}"]').tab('show');
 </script>
 
+<script type="text/javascript">
+$(document).on('pjax:complete', function() { // 加载多说
+ alter(1)
+    MathJax.Hub.Typeset();
+    
+});
+</script>
+<script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        "HTML-CSS": { extensions: ["handle-floats.js"] },
+        TeX: { equationNumbers: { autoNumber: "AMS" } },
+        tex2jax: {
+            inlineMath: [['$$$', '$$$'], ['$', '$'], ['\\(', '\\)']],
+            processEscapes: true
+        }
+    });
+</script>
+<script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML" data-no-instant></script>
+
+
 
 <!--button是右上方导航和显示目录的按钮-->
 
