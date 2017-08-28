@@ -1,6 +1,6 @@
 ---
 layout: post
-title: SVM：非线性
+title: SVM：非线性-核函数
 category: 机器学习
 tags: SVM
 keywords: SVM 机器学习

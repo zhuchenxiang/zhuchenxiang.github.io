@@ -10,7 +10,7 @@
 </div>
 <script type="text/javascript" src="/public/js/jquery.js"></script>
 <script type="text/javascript" src="/public/js/bootstrap.js"></script>
-<script src="//cdn.bootcss.com/jquery.pjax/1.9.6/jquery.pjax.min.js"></script>
+<script src="/public/js/jquery.pjax.js"></script>
 <script src="/public/js/prettify/prettify.js"></script>
 <script src="/public/js/base.js"></script>
 <!--
@@ -20,64 +20,14 @@
     $('a[href="#{{ site.active }}"]').tab('show');
 </script>
 
+
 <script>
-    $(document).pjax('a[target!=_blank]', '.aside3', {
-        fragment: '.aside3',
-        timeout: 5000,
-    });
-</script>
-
-<script type="text/javascript">
-$(document).on('pjax:complete', function() { // 加载多说
- alter(1)
-    MathJax.Hub.Typeset();
-    
-},'pjax:end': function () {
-	alter(2)
-        /*渲染MathJax数学公式*/
-        $.getScript('//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML',function () {
-            MathJax.Hub.Typeset();
-        });
-    });
-</script>
-<script type="text/x-mathjax-config">
-  MathJax.Hub.Config({
-    extensions: ["tex2jax.js"],
-    jax: ["input/TeX", "output/HTML-CSS"],
-    tex2jax: {
-      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
-      displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
-      processEscapes: true
-    },
-    "HTML-CSS": { availableFonts: ["TeX"] }
-  });
-</script>
-<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML" data-no-instant></script>
-
-<script data-no-instant>
-InstantClick.on('change', function(isInitialLoad) {
-	alter(isInitialLoad)
-	if (isInitialLoad === false) {
-		if (typeof MathJax !== 'undefined') // support MathJax
-  				MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
-		if (typeof Prism !== 'undefined') {
-			Prism.highlightAll(true,null);
-		}
-		if (typeof ga !== 'undefined') ga('send', 'pageview', location.pathname + location.search);
-		if (typeof _hmt !== 'undefined') _hmt.push(['_trackPageview', location.pathname + location.search]);
-	}
-});
-InstantClick.init();
-</script>
-
-<script type="text/javascript">
-	$(document).ready(function(){
-  
-   alter()
-   MathJax.Hub.Queue(["Typeset", MathJax.Hub]);
-});
+$(document).on('pjax:complete', function() {
+  alter()
+})
 
 </script>
+
 
 <!--button是右上方导航和显示目录的按钮-->
 
