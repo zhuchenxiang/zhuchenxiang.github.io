@@ -90,12 +90,12 @@ $\gamma_{i} = c_if(x_i)=c_i(\vec{w}.\vec{x_i}+b) $
 
 函数间隔决定了数据点被分为某一类的确信度。因为$c_if(x_i)$>0则表示分类正确,$c_if(x_i)$值越大，表示越可信。
 
-但是当(w,b)进行缩放时，超平面并没有改变，但是函数间隔却变化了。所以需要${||\vec{w}||}$大小固定。
+但是当(w,b)进行缩放时，超平面并没有改变，但是函数间隔却变化了。所以需要$\left \|\vec{w}\right \|$大小固定。
 
 几何间隔实际就是点到平面距离。
 
-固定||$\vec{w}$|| $\Longleftrightarrow$ 增加一个约束,使||$\vec{w}$||=常数。
-我们不妨设置这个约束为，缩放$\vec{w}$后，距离超平面最近的点$x_{i}$使得|f($x_i$)|=1
+固定$\left \|\vec{w}\right \|$ $\Longleftrightarrow$ 增加一个约束,使$\left \|\vec{w}\right \|$=常数。
+我们不妨设置这个约束为，缩放$\left \|\vec{w}\right \|$后，距离超平面最近的点$x_{i}$使得$\left |f(x_i)\right |$=1
 
 ### 重新建立目标函数
 $max_{w,b}[\min_{i}\frac{c_i(\vec{w}.\vec{x_i}+b)}{||\vec{w}||}]$
@@ -106,7 +106,7 @@ $max_{w,b}[\frac{1}{||\vec{w}||}\min_{i}c_i(\vec{w}.\vec{x_i}+b)]$
 
 $c_i(\vec{w}.\vec{x_i}+b)\ge1$
 
-|f($x_i$)|=1
+$\left |f(x_i)\right |$=1
 
 $\Longleftrightarrow$
 新目标函数
