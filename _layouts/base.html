@@ -35,6 +35,7 @@
   </script>
   <script data-no-instant>
     InstantClick.on('change', function(isInitialLoad) {
+      alter(isInitialLoad)
         if (isInitialLoad === false) {
             if (typeof MathJax !== 'undefined') 
                 MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
