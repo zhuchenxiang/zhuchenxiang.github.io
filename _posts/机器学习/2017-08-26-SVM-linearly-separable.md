@@ -34,7 +34,7 @@ description:
 | ------------- | ------------- |
 | Content Cell  | Content Cell  |
 | Content Cell  | Content Cell  |
-{:.table}
+{:.mbtablestyle}
 
 |       直线      |         平面         |             超平面              |
 |-----------------|----------------------|---------------------------------|
