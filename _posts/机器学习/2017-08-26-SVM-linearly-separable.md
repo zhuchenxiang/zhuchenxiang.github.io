@@ -87,9 +87,13 @@ $max_{w,b}[\min_{i}\frac{c_i(\vec{w}.\vec{x_i}+b)}{||\vec{w}||}]$
 ### 函数间隔 几何间隔
 样本点$x_{i}$与超平面f(x)之间的函数间隔定义为
 $\gamma_{i} = c_if(x_i)=c_i(\vec{w}.\vec{x_i}+b) $ 
+
 函数间隔决定了数据点被分为某一类的确信度。因为$c_if(x_i)$>0则表示分类正确,$c_if(x_i)$值越大，表示越可信。
+
 但是当(w,b)进行缩放时，超平面并没有改变，但是函数间隔却变化了。所以需要$||\vec{w}||$大小固定。
+
 几何间隔实际就是点到平面距离。
+
 固定$||\vec{w}||$ $\Longleftrightarrow$ 增加一个约束,使$||\vec{w}||$=常数。
 我们不妨设置这个约束为，缩放$\vec{w}$后，距离超平面最近的点$x_{i}$使得$|f(x_i)|=1$
 
@@ -97,16 +101,26 @@ $\gamma_{i} = c_if(x_i)=c_i(\vec{w}.\vec{x_i}+b) $
 $max_{w,b}[\min_{i}\frac{c_i(\vec{w}.\vec{x_i}+b)}{||\vec{w}||}]$
 $\Longleftrightarrow$
 $max_{w,b}[\frac{1}{||\vec{w}||}\min_{i}c_i(\vec{w}.\vec{x_i}+b)]$
+
 约束条件
+
 $c_i(\vec{w}.\vec{x_i}+b)\ge1$
+
 $|f(x_i)|=1$
+
 $\Longleftrightarrow$
 新目标函数
+
 $max_{w,b}\frac{1}{||\vec{w}||}$
+
 约束条件
+
 $c_i(\vec{w}.\vec{x_i}+b)\ge1$
+
 $\Longleftrightarrow$
+
 $min_{w,b}\frac{1}{2}||\vec{w}||^2$
+
 $c_i(\vec{w}.\vec{x_i}+b)\ge1$
 
 ## 求目标函数极值
@@ -117,7 +131,7 @@ $c_i(\vec{w}.\vec{x_i}+b)-1\ge0$ (等于0的点，即为距离超平面最近点
 
 $\Longleftrightarrow$ 写出如下表达式(拉格朗日乘子法,增加系数$\alpha$)
 
-$L(\vec{w},b,\alpha) = \frac{1}{2}||\vec{w}||^2 - \sum_{i=1}^{n}\alpha_i(c_i(\vec{w}.\vec{x_i}+b)-1)$
+$L(\vec{w},b,\alpha) = \frac{1}{2}||\vec{w}||^2 - \sum_{i=1}^{n}\alpha_i(c_i(\vec{w}\vec{x_i}+b)-1)$
 
 $\Longleftrightarrow$ 原问题$min_{w,b}\frac{1}{2}||\vec{w}||^2$转化为
 
