@@ -126,9 +126,9 @@ blockquote p {
 }
 
 .mbtablestyle {
-        border-collapse: collapse;
+  border: 1px solid black;
+}
 
-   > table, td, th {
-        border: 1px solid black;
-        }
+.mbtablestyle > .table .td .th {
+  border: 1px solid black;
 }
