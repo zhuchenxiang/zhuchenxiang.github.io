@@ -25,5 +25,16 @@
     });
 </script>
 <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML" data-no-instant></script>
+<script type="text/javascript">
+  $(document).on({
+    /*pjax请求回来页面后触发的事件*/
+    'pjax:end': function () {
+        /*渲染MathJax数学公式*/
+        $.getScript('//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML',function () {
+            MathJax.Hub.Typeset();
+        });
+    }
+});
+</script>
 
 
