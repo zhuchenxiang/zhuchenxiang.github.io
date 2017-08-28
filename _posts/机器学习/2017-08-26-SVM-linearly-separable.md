@@ -40,12 +40,15 @@ description:
 点($x_0,y_0$)到直线距离$
 d = \frac{|w_1 x_0 + w_2 y_0 + b|}{\sqrt{w_1^2+w_2^2}}
 $
+
 点($x_0,y_0,z_0$) 到面距离$
 d = \frac{|w_1 x_0 + w_2 y_0 + w_3 z_0 + b|}{\sqrt{w_1^2+w_2^2+w_3^2}}
 $
+
 点($x_0,y_0,z_0,...n_0$)到超平面距离$
 d = \frac{|w_1 x_0 + w_2 y_0 + w_3 z_0 + ... +w_nn_0 + b|}{\sqrt{w_1^2+w_2^2+w_3^2+...++w_n^2}}
 $
+
 ### 公式1: 向量表现形式
 $
 f(x)=w_1x+w_2y+w_3z+ ... +w_nn+b 
@@ -58,6 +61,7 @@ f(x)=w_1x+w_2y+w_3z+ ... +w_nn+b
     ^\mathsf{T} + b
  = \vec{w}.\vec{x}+b=0
 $
+
 $
 d = \frac{|w_1 x_0 + w_2 y_0 + w_3 z_0 + b|}{\sqrt{w_1^2+w_2^2+w_3^2}}
   =\frac{|\vec{w}.\vec{x}+b|}{||\vec{w}||}
@@ -70,10 +74,14 @@ $||\vec{w}||$为向量w的2范数。
 定义点$x_i$,属于类别$c_i$,($c_i$ $\in$ (+1,-1)， +1表示在法线方向上，-1表示在法线反方向)。
  
 $f(x_i)>0$  $\Longleftrightarrow$ $c_i=+1$ $\Longleftrightarrow$ $f(x_i)c_i$>0
-$f(x_i)<0$  $\Longleftrightarrow$ $c_i=-1$ $\Longleftrightarrow$ $f(x_i)c_i$>0
-则距离公式可以表达为 $ d =\frac{|f(x_i)|}{||\vec{w}||} = \frac{c_if(x_i)}{||\vec{w}||} =\frac{c_i(\vec{w}.\vec{x}+b)}{||\vec{w}||}$
 
-所以目标函数为$max_{w,b}[\min_{i}\frac{c_i(\vec{w}.\vec{x_i}+b)}{||\vec{w}||}]$
+$f(x_i)<0$  $\Longleftrightarrow$ $c_i=-1$ $\Longleftrightarrow$ $f(x_i)c_i$>0
+
+则距离公式可以表达为 
+$ d =\frac{|f(x_i)|}{||\vec{w}||} = \frac{c_if(x_i)}{||\vec{w}||} =\frac{c_i(\vec{w}.\vec{x}+b)}{||\vec{w}||}$
+
+所以目标函数为 
+$max_{w,b}[\min_{i}\frac{c_i(\vec{w}.\vec{x_i}+b)}{||\vec{w}||}]$
 
 
 ### 函数间隔 几何间隔
