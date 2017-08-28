@@ -25,7 +25,13 @@ $(document).on('pjax:complete', function() { // 加载多说
  alter(1)
     MathJax.Hub.Typeset();
     
-});
+},'pjax:end': function () {
+	alter(2)
+        /*渲染MathJax数学公式*/
+        $.getScript('//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML',function () {
+            MathJax.Hub.Typeset();
+        });
+    });
 </script>
 <script type="text/x-mathjax-config">
   MathJax.Hub.Config({
