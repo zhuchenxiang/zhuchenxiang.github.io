@@ -30,8 +30,8 @@
     /*pjax请求回来页面后触发的事件*/
     'pjax:end': function () {
         /*渲染MathJax数学公式*/
-        $.getScript('//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML',function () {
-            MathJax.Hub.Typeset();
+        $.getScript('//cdn.bootcss.com/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML',function () {
+            MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
         });
     }
 });
