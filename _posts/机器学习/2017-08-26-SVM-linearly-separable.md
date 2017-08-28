@@ -30,16 +30,11 @@ description:
 
 ### 公式1: 点到线、面距离 
 
-| First Header  | Second Header |
-| ------------- | ------------- |
-| Content Cell  | Content Cell  |
-| Content Cell  | Content Cell  |
-{: .table .table-bordered}
-
 |       直线      |         平面         |             超平面              |
 |-----------------|----------------------|---------------------------------|
 | $w_1x+w_2y+b=0$ | $w_1x+w_2y+w_3z+b=0$ | $w_1x+w_2y+w_3z+ ... +w_nn+b=0$ |
 | 点P($x_0,y_0$)  | 点P($x_0,y_0,z_0$)   | 点P($x_0,y_0,z_0,...n_0$)       |
+{: .table .table-bordered}
 
 
 点($x_0,y_0$)到直线距离$
