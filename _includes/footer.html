@@ -31,9 +31,9 @@ tex2jax: {inlineMath: [['$','$'], ['\(','\)']]}
 
 <script>
  $(document).ready(function(){
- MathJax.Hub.Queue(["Typeset", MathJax.Hub]);})
+ })
 $(document).on('pjax:complete', function() {
-  alert (2)
+  MathJax.Hub.Queue(["Typeset", MathJax.Hub]);
 })
 
 </script>
