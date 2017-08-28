@@ -106,12 +106,12 @@ $max_{w,b}[\frac{1}{||\vec{w}||}\min_{i}c_i(\vec{w}.\vec{x_i}+b)]$
 
 $c_i(\vec{w}.\vec{x_i}+b)\ge1$
 
-$\left |f(x_i)\right |$=1
+$\left | f(x_i) \right |$=1
 
 $\Longleftrightarrow$
 新目标函数
 
-$max_{w,b}\frac{1}{||\vec{w}||}$
+$\max_{w,b}\frac{1}{||\vec{w}||}$
 
 约束条件
 
@@ -119,7 +119,7 @@ $c_i(\vec{w}.\vec{x_i}+b)\ge1$
 
 $\Longleftrightarrow$
 
-$min_{w,b}\frac{1}{2}||\vec{w}||^2$
+$\min_{w,b}\frac{1}{2}||\vec{w}||^2$
 
 $c_i(\vec{w}.\vec{x_i}+b)\ge1$
 
@@ -131,9 +131,9 @@ $c_i(\vec{w}.\vec{x_i}+b)-1\ge0$ (等于0的点，即为距离超平面最近点
 
 $\Longleftrightarrow$ 写出如下表达式(拉格朗日乘子法,增加系数$\alpha$)
 
-$L(\vec{w},b,\alpha) = \frac{1}{2}||\vec{w}||^2 - \sum_{i=1}^{n}\alpha_i(c_i(\vec{w}\vec{x_i}+b)-1)$
+L($\vec{w},b,\alpha) = \frac{1}{2}||\vec{w}||^2 - \sum_{i=1}^{n}\alpha_i(c_i(\vec{w}\vec{x_i}+b)-1)$
 
-$\Longleftrightarrow$ 原问题$min_{w,b}\frac{1}{2}||\vec{w}||^2$转化为
+$\Longleftrightarrow$ 原问题$\min_{w,b}\frac{1}{2}||\vec{w}||^2$转化为
 
 $min_{w,b}max_{\alpha}L(\vec{w},b,\vec{\alpha})$
 
