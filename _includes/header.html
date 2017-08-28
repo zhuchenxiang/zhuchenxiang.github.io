@@ -23,8 +23,21 @@
             processEscapes: true
         }
     });
-    MathJax.Hub.Queue(["Typeset", MathJax.Hub]);
-    </script>
-<script src="//cdn.bootcss.com/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+</script>
+<script type="text/javascript">
+  funtion
+</script>
+<script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script data-no-instant>
+    InstantClick.on('change', function(isInitialLoad) {
+        if (isInitialLoad === false) {
+            if (typeof Prism !== 'undefined') 
+                Prism.highlightAll(true,null);
+            if (typeof ga !== 'undefined') 
+                ga('send', 'pageview', location.pathname + location.search);
+        }
+    });
+    InstantClick.init();
+</script>
+
 
