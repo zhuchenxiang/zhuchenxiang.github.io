@@ -20,6 +20,13 @@
     $('a[href="#{{ site.active }}"]').tab('show');
 </script>
 
+<script>
+    $(document).pjax('a[target!=_blank]', '.aside3', {
+        fragment: '.aside3',
+        timeout: 5000,
+    });
+</script>
+
 <script type="text/javascript">
 $(document).on('pjax:complete', function() { // 加载多说
  alter(1)
