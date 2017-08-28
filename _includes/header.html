@@ -24,13 +24,12 @@
         }
     });
 </script>
-<script type="text/javascript">
-  funtion
-</script>
 <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 <script data-no-instant>
     InstantClick.on('change', function(isInitialLoad) {
         if (isInitialLoad === false) {
+            if (typeof MathJax !== 'undefined') 
+                MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
             if (typeof Prism !== 'undefined') 
                 Prism.highlightAll(true,null);
             if (typeof ga !== 'undefined') 
