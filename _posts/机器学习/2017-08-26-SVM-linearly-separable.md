@@ -162,18 +162,18 @@ $max_{\alpha}min_{w,b}L(w,b,\alpha)
 
 $\Longleftrightarrow$ 
 
-min_{\alpha}(\frac{1}{2}\sum_{ij=1}^{n}\alpha_i\alpha_jc_ic_jx_ix_j - \sum_{i=1}^{n}\alpha_i)
+$min_{\alpha}(\frac{1}{2}\sum_{ij=1}^{n}\alpha_i\alpha_jc_ic_jx_ix_j - \sum_{i=1}^{n}\alpha_i)
 = min_{\alpha}(\frac{1}{2}\sum_{i=1}^{n}\sum_{j=1}^{n}\alpha_i\alpha_jc_ic_j(x_ix_j) - \sum_{i=1}^{n}\alpha_i)$
 
 **约束** 0=$\sum_{i=1}^{n}\alpha_ic_i$
 
-求出最优$min_{\alpha}(\frac{1}{2}\sum_{i=1}^{n}\sum_{j=1}^{n}\alpha_i\alpha_jc_ic_j(x_ix_j) - \sum_{i=1}^{n}\alpha_i)$
+求出最优 $min_{\alpha}(\frac{1}{2}\sum_{i=1}^{n}\sum_{j=1}^{n}\alpha_i\alpha_jc_ic_j(x_ix_j) - \sum_{i=1}^{n}\alpha_i)$
 
 ## 列出最终结论
 
-目标函数 $a^{*} = min_{\alpha}(\frac{1}{2}\sum_{i=1}^{n}\sum_{j=1}^{n}\alpha_i\alpha_jc_ic_j(x_ix_j) - \sum_{i=1}^{n}\alpha_i)$
+目标函数 $min_{\alpha}(\frac{1}{2}\sum_{i=1}^{n}\sum_{j=1}^{n}\alpha_i\alpha_jc_ic_j(x_ix_j) - \sum_{i=1}^{n}\alpha_i)$
 
-约束 0=$\sum_{i=1}^{n}\alpha_ic_i$  且 $\alpha_i>0$
+**约束** 0=$\sum_{i=1}^{n}\alpha_ic_i$  且 $\alpha_i>0$
 
 
 超平面系数
