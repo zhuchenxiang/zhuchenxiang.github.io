@@ -100,27 +100,33 @@ $$
 
 ## 求目标函数极值
 ### 公式2：拉格朗日乘子法
-$c_i(\vec{w}.\vec{x_i}+b)\ge1$
-$\Longleftrightarrow$
-$c_i(\vec{w}.\vec{x_i}+b)-1\ge0$ (等于0的点，即为距离超平面最近点)
 
-$\Longleftrightarrow$ 写出如下表达式(拉格朗日乘子法,增加系数$\alpha$)
+拉格朗日函数
+$$L(\vec{w},b,\alpha) = \frac{1}{2}||\vec{w}||^2 - \sum_{i=1}^{n}\alpha_i(c_i(\vec{w}\vec{x_i}+b)-1)$$
 
-L($\vec{w},b,\alpha) = \frac{1}{2}||\vec{w}||^2 - \sum_{i=1}^{n}\alpha_i(c_i(\vec{w}\vec{x_i}+b)-1)$
+则目标函数转化为
+$$ 
+\min_{w,b}\frac{1}{2}||\vec{w}||^2
+= min_{w,b}max_{\alpha}L(\vec{w},b,\vec{\alpha})
+$$ 
 
-$\Longleftrightarrow$ 原问题$\min_{w,b}\frac{1}{2}||\vec{w}||^2$转化为
 
-$min_{w,b}max_{\alpha}L(\vec{w},b,\vec{\alpha})$
-
-### 公式3：对偶问题
+### 公式3：对偶函数
 
 $\Longleftrightarrow$ 对偶问题
 $max_{\alpha}min_{w,b}L(\vec{w},b,\vec{\alpha})$
 
 ### 公式4：偏导 求极值
 将拉格朗日函数$L(\vec{w},b,\alpha)$分别对w,b求偏导，并令其为0
-$\frac{\partial L}{\partial w}=0$ $\Longrightarrow$ $w^\mathsf{T}=\sum_{i=1}^{n}\alpha_ic_ix_i$
-$\frac{\partial L}{\partial b}=0$ $\Longrightarrow$ $0=\sum_{i=1}^{n}\alpha_ic_i$ 
+$$\frac{\partial L}{\partial w}=0
+\Longrightarrow
+$w^\mathsf{T}=\sum_{i=1}^{n}\alpha_ic_ix_i
+$$
+
+$$\frac{\partial L}{\partial b}=0
+\Longrightarrow$ 
+0=\sum_{i=1}^{n}\alpha_ic_i
+$$ 
 
 ### 将结果代入拉格朗日函数
 $L(\vec{w},b,\alpha) = \frac{1}{2}||\vec{w}||^2 - \sum_{i=1}^{n}\alpha_i(c_i(\vec{w}.\vec{x_i}+b)-1)$
