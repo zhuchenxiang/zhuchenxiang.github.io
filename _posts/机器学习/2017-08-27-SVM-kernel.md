@@ -11,4 +11,4 @@ description:
 ![1](/public/img/machineL/svm/p_03.png)
 
 假设映射函数为Φ，则原目标函数改为
-$a^{*} = min_{\alpha}(\frac{1}{2}\sum_{i=1}^{n}\sum_{j=1}^{n}\alpha_i\alpha_jc_ic_j\Phi(x_i)\Phi(x_j) - \sum_{i=1}^{n}\alpha_i)$
+$min_{\alpha}(\frac{1}{2}\sum_{i=1}^{n}\sum_{j=1}^{n}\alpha_i\alpha_jc_ic_j\Phi(x_i)\Phi(x_j) - \sum_{i=1}^{n}\alpha_i)$
