@@ -26,7 +26,7 @@ description:
     我们希望最靠近的点，到分割面的距离尽量大，即 max[min[d]]。
 
 ### 公式1: 点到线、面距离 
-
+<pre><code>
 平面上一点 P($x_0,y_0,z_0,...n_0$)
 
 平面方程 $w_1x+w_2y+w_3z+ ... +w_nn+b=0$
@@ -34,6 +34,7 @@ description:
 点P到平面距离$$
 d = \frac{|w_1 x_0 + w_2 y_0 + w_3 z_0 + ... + w_n n_0 + b|}{\sqrt{w_1^2+w_2^2+w_3^2+ ... +w_n^2}}
 $$
+</code></pre>
 
 ### 公式1: 向量表现形式
 
@@ -92,9 +93,9 @@ $$
 
 $$ 
 max_{w,b}[\min_{i}\frac{c_i(\vec{w}.\vec{x_i}+b)}{||\vec{w}||}]
-= & max_{w,b}[\min_{i}\frac{1}{||\vec{w}||}]
-= & max_{w,b}\frac{1}{||\vec{w}||}
-= & \min_{w,b}\frac{1}{2}||\vec{w}||^2
+= max_{w,b}[\min_{i}\frac{1}{||\vec{w}||}]
+= max_{w,b}\frac{1}{||\vec{w}||}
+= \min_{w,b}\frac{1}{2}||\vec{w}||^2
 $$
 
 约束$$c_i(\vec{w}.\vec{x_i}+b)\ge1 
