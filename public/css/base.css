@@ -103,7 +103,11 @@ body, html {
   line-height: 1.42857143;
 }
 #content {
-  font-size: 18px;
+  font-size: 13px;
+  line-height: 1.42857143;
+  word-break: break-all;
+  word-wrap: break-word;
+  color: #333;
 }
 #content h2, h3 {
   line-height: 2;
