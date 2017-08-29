@@ -21,7 +21,7 @@ TEST2
 
 ## 一级标题
 
-       value1
+       P($x_0,y_0,z_0,...n_0$)
        value2
 
        value3
@@ -40,8 +40,9 @@ TEST2
 <pre><code>这是一个代码区块。
 </code></pre>
 
-<code>xxxx
+<code>P($x_0,y_0,z_0,...n_0$)
 </code>
+
 
 *   Bird
 
