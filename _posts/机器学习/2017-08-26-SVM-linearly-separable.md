@@ -92,7 +92,8 @@ $$
 max_{w,b}[\min_{i}\frac{c_i(\vec{w}.\vec{x_i}+b)}{||\vec{w}||}]
 = max_{w,b}[\min_{i}\frac{1}{||\vec{w}||}]
 = max_{w,b}\frac{1}{||\vec{w}||}
-= \min_{w,b}\frac{1}{2}||\vec{w}||^2
+\Longleftrightarrow$
+\min_{w,b}\frac{1}{2}||\vec{w}||^2
 $$
 
 约束$$c_i(\vec{w}.\vec{x_i}+b)\ge1 
@@ -107,17 +108,21 @@ $$L(\vec{w},b,\alpha) = \frac{1}{2}||\vec{w}||^2 - \sum_{i=1}^{n}\alpha_i(c_i(\v
 则目标函数转化为
 $$ 
 \min_{w,b}\frac{1}{2}||\vec{w}||^2
-= min_{w,b}max_{\alpha}L(\vec{w},b,\vec{\alpha})
+\Longleftrightarrow$
+min_{w,b}max_{\alpha}L(\vec{w},b,\vec{\alpha})
 $$ 
 
 
 ### 公式3：对偶函数
-
-$\Longleftrightarrow$ 对偶问题
-$max_{\alpha}min_{w,b}L(\vec{w},b,\vec{\alpha})$
+$$
+min_{w,b}max_{\alpha}L(\vec{w},b,\vec{\alpha})
+\Longleftrightarrow$
+max_{\alpha}min_{w,b}L(\vec{w},b,\vec{\alpha})
+$$
 
 ### 公式4：偏导 求极值
 将拉格朗日函数$L(\vec{w},b,\alpha)$分别对w,b求偏导，并令其为0
+
 $$\frac{\partial L}{\partial w}=0
 \Longrightarrow
 $w^\mathsf{T}=\sum_{i=1}^{n}\alpha_ic_ix_i
