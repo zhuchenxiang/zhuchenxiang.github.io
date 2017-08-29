@@ -12,3 +12,7 @@ description:
 
 假设映射函数为Φ，则原目标函数改为
 $min_{\alpha}(\frac{1}{2}\sum_{i=1}^{n}\sum_{j=1}^{n}\alpha_i\alpha_jc_ic_j\Phi(x_i)\Phi(x_j) - \sum_{i=1}^{n}\alpha_i)$
+
+
+核函数做了映射与点积，定义核函数为K。目标函数为
+$min_{\alpha}(\frac{1}{2}\sum_{i=1}^{n}\sum_{j=1}^{n}\alpha_i\alpha_jc_ic_jK(x_i x_j) - \sum_{i=1}^{n}\alpha_i)$
