@@ -25,7 +25,7 @@ description:
     假设样本点到超平面距离为d，则最近样本点为min[d]。
     我们希望最靠近的点，到分割面的距离尽量大，即 max[min[d]]。
 
-### 公式1: 点到线、面距离 
+### 点到线、面距离 (公式1)
 
 平面上一点P($x_0,y_0,z_0,...n_0$)     
 平面方程$w_1x+w_2y+w_3z+ ... +w_nn+b=0$   
@@ -33,7 +33,7 @@ description:
 d = \frac{|w_1 x_0 + w_2 y_0 + w_3 z_0 + ... + w_n n_0 + b|}{\sqrt{w_1^2+w_2^2+w_3^2+ ... +w_n^2}}
 $$
 
-### 公式1: 向量表现形式
+### 向量表现形式 (公式1)
 
 平面方程 $$
 f(x)=  \begin{bmatrix}
@@ -102,7 +102,7 @@ $$
 c_i(\vec{w}.\vec{x_i}+b)\ge1 
 $$ 
 
-### 公式2：拉格朗日乘子法
+### 拉格朗日乘子法 (公式2)
 
 拉格朗日函数
 $$L(w,b,\alpha) = \frac{1}{2}||\vec{w}||^2 - \sum_{i=1}^{n}\alpha_i(c_i(\vec{w}\vec{x_i}+b)-1)$$
@@ -115,14 +115,14 @@ min_{w,b}max_{\alpha}L(w,b,\vec{\alpha})
 $$ 
 
 ## 求目标函数极值
-### 公式3：对偶函数
+### 对偶函数 (公式3)
 $$
 min_{w,b}max_{\alpha}L(w,b,\alpha)
 \Longleftrightarrow
 max_{\alpha}min_{w,b}L(w,b,\alpha)
 $$
 
-### 公式4：偏导 求极值
+### 偏导 求极值 (公式4)
 将拉格朗日函数$L(\vec{w},b,\alpha)$分别对w,b求偏导，并令其为0
 
 $$\frac{\partial L}{\partial w}=0
