@@ -33,9 +33,6 @@ description:
 d = \frac{|w_1 x_0 + w_2 y_0 + w_3 z_0 + ... + w_n n_0 + b|}{\sqrt{w_1^2+w_2^2+w_3^2+ ... +w_n^2}}
 $$
 
-
-
-
 ### 公式1: 向量表现形式
 
 平面方程 $$
@@ -56,9 +53,9 @@ $$
 
 $||\vec{w}||$为向量w的2范数。
 
-### 推导
+## 推导
 
-#### 目标函数
+### 目标函数
 定义点$x_i$,属于类别$c_i$,($c_i$ $\in$ (+1,-1)， +1表示在法线方向上，-1表示在法线反方向)。
  
 $f(x_i)>0$  $\Longleftrightarrow$ $c_i=+1$ $\Longleftrightarrow$ $f(x_i)c_i$>0
@@ -74,7 +71,7 @@ max_{w,b}[\min_{i}\frac{c_i(\vec{w}.\vec{x_i}+b)}{||\vec{w}||}]
 $$
 
 
-#### 固定||w|| (函数间隔 几何间隔)
+### 固定||w|| (函数间隔 几何间隔)
 样本点$x_{i}$与超平面f(x)之间的函数间隔定义为$$
 \gamma_{i} = c_if(x_i)=c_i(\vec{w}.\vec{x_i}+b)
 $$ 
@@ -85,7 +82,7 @@ $$
 
 几何间隔实际就是点到平面距离。
 
-#### 简化目标函数
+### 简化目标函数
 
 固定$\left \|\vec{w}\right \|$ $\Longleftrightarrow$ 增加一个约束,使$\left \|\vec{w}\right \|$=常数。
 
@@ -101,8 +98,8 @@ $$
 约束$$c_i(\vec{w}.\vec{x_i}+b)\ge1 
 $$ 
 
-### 求目标函数极值
-#### 公式2：拉格朗日乘子法
+## 求目标函数极值
+### 公式2：拉格朗日乘子法
 $c_i(\vec{w}.\vec{x_i}+b)\ge1$
 $\Longleftrightarrow$
 $c_i(\vec{w}.\vec{x_i}+b)-1\ge0$ (等于0的点，即为距离超平面最近点)
@@ -115,17 +112,17 @@ $\Longleftrightarrow$ 原问题$\min_{w,b}\frac{1}{2}||\vec{w}||^2$转化为
 
 $min_{w,b}max_{\alpha}L(\vec{w},b,\vec{\alpha})$
 
-#### 公式3：对偶问题
+### 公式3：对偶问题
 
 $\Longleftrightarrow$ 对偶问题
 $max_{\alpha}min_{w,b}L(\vec{w},b,\vec{\alpha})$
 
-#### 公式4：偏导 求极值
+### 公式4：偏导 求极值
 将拉格朗日函数$L(\vec{w},b,\alpha)$分别对w,b求偏导，并令其为0
 $\frac{\partial L}{\partial w}=0$ $\Longrightarrow$ $w^\mathsf{T}=\sum_{i=1}^{n}\alpha_ic_ix_i$
 $\frac{\partial L}{\partial b}=0$ $\Longrightarrow$ $0=\sum_{i=1}^{n}\alpha_ic_i$ 
 
-#### 将结果代入拉格朗日函数
+### 将结果代入拉格朗日函数
 $L(\vec{w},b,\alpha) = \frac{1}{2}||\vec{w}||^2 - \sum_{i=1}^{n}\alpha_i(c_i(\vec{w}.\vec{x_i}+b)-1)$
 
 =$\frac{1}{2}\vec{w}\vec{w}^\mathsf{T} + \sum_{i=1}^{n}\alpha_i -b\sum_{i=1}^{n}\alpha_i c_i - \vec{w}\sum_{i=1}^{n}\alpha_i c_i \vec{x_i}$
@@ -146,7 +143,7 @@ $L(\vec{w},b,\alpha) = \frac{1}{2}||\vec{w}||^2 - \sum_{i=1}^{n}\alpha_i(c_i(\ve
 
 =$ \sum_{i=1}^{n}\alpha_i - \frac{1}{2}\sum_{ij=1}^{n}\alpha_i\alpha_jc_ic_jx_ix_j$
 
-#### 整理出最终目标函数
+### 整理出最终目标函数
 $max_{\alpha}L(\vec{w},b,\vec{\alpha})$  $\Longrightarrow$ 
 $a^{*} = max_{\alpha}(\sum_{i=1}^{n}\alpha_i - \frac{1}{2}\sum_{ij=1}^{n}\alpha_i\alpha_jc_ic_jx_ix_j)$
 
@@ -163,7 +160,7 @@ $a^{*} = min_{\alpha}(\frac{1}{2}\sum_{i=1}^{n}\sum_{j=1}^{n}\alpha_i\alpha_jc_i
 
 求出最优$a^{*}$
 
-### 列出最终结论
+## 列出最终结论
 
 目标函数 $a^{*} = min_{\alpha}(\frac{1}{2}\sum_{i=1}^{n}\sum_{j=1}^{n}\alpha_i\alpha_jc_ic_j(x_ix_j) - \sum_{i=1}^{n}\alpha_i)$
 
