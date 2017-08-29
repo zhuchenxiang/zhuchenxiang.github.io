@@ -156,22 +156,18 @@ $L(w,b,\alpha) = \frac{1}{2}||\vec{w}||^2 - \sum_{i=1}^{n}\alpha_i(c_i(\vec{w}\v
 
 =$ \sum_{i=1}^{n}\alpha_i - \frac{1}{2}\sum_{ij=1}^{n}\alpha_i\alpha_jc_ic_jx_ix_j$
 
-### 整理出最终目标函数
-$max_{\alpha}L(\vec{w},b,\vec{\alpha})$  $\Longrightarrow$ 
-$a^{*} = max_{\alpha}(\sum_{i=1}^{n}\alpha_i - \frac{1}{2}\sum_{ij=1}^{n}\alpha_i\alpha_jc_ic_jx_ix_j)$
+### 整理最终目标函数
+$max_{\alpha}min_{w,b}L(w,b,\alpha)
+ = max_{\alpha}(\sum_{i=1}^{n}\alpha_i - \frac{1}{2}\sum_{ij=1}^{n}\alpha_i\alpha_jc_ic_jx_ix_j)$
 
-$\Longrightarrow$ 
+$\Longleftrightarrow$ 
 
-$a^{*} = min_{\alpha}(\frac{1}{2}\sum_{ij=1}^{n}\alpha_i\alpha_jc_ic_jx_ix_j - \sum_{i=1}^{n}\alpha_i)$
+min_{\alpha}(\frac{1}{2}\sum_{ij=1}^{n}\alpha_i\alpha_jc_ic_jx_ix_j - \sum_{i=1}^{n}\alpha_i)
+= min_{\alpha}(\frac{1}{2}\sum_{i=1}^{n}\sum_{j=1}^{n}\alpha_i\alpha_jc_ic_j(x_ix_j) - \sum_{i=1}^{n}\alpha_i)$
 
-$\Longrightarrow$ 
+**约束** 0=$\sum_{i=1}^{n}\alpha_ic_i$
 
-$a^{*} = min_{\alpha}(\frac{1}{2}\sum_{i=1}^{n}\sum_{j=1}^{n}\alpha_i\alpha_jc_ic_j(x_ix_j) - \sum_{i=1}^{n}\alpha_i)$
-
-
-约束条件0=$\sum_{i=1}^{n}\alpha_ic_i$
-
-求出最优$a^{*}$
+求出最优$min_{\alpha}(\frac{1}{2}\sum_{i=1}^{n}\sum_{j=1}^{n}\alpha_i\alpha_jc_ic_j(x_ix_j) - \sum_{i=1}^{n}\alpha_i)$
 
 ## 列出最终结论
 
