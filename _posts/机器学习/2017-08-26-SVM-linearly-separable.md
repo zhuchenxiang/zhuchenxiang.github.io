@@ -64,7 +64,7 @@ $f(x_i)>0$  $\Longleftrightarrow$ $c_i=+1$ $\Longleftrightarrow$ $f(x_i)c_i$>0
 
 $f(x_i)<0$  $\Longleftrightarrow$ $c_i=-1$ $\Longleftrightarrow$ $f(x_i)c_i$>0
 
-则距离公式可以表达为$$  
+距离$$  
 d =\frac{|f(x_i)|}{||\vec{w}||} = \frac{c_if(x_i)}{||\vec{w}||} =\frac{c_i(\vec{w}.\vec{x}+b)}{||\vec{w}||}
 $$
 
@@ -92,9 +92,9 @@ $$
 
 $$ 
 max_{w,b}[\min_{i}\frac{c_i(\vec{w}.\vec{x_i}+b)}{||\vec{w}||}]
-= max_{w,b}[\min_{i}\frac{1}{||\vec{w}||}]
-= max_{w,b}\frac{1}{||\vec{w}||}
-= \min_{w,b}\frac{1}{2}||\vec{w}||^2
+= & max_{w,b}[\min_{i}\frac{1}{||\vec{w}||}]
+= & max_{w,b}\frac{1}{||\vec{w}||}
+= & \min_{w,b}\frac{1}{2}||\vec{w}||^2
 $$
 
 约束$$c_i(\vec{w}.\vec{x_i}+b)\ge1 
