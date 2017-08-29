@@ -92,32 +92,34 @@ $$
 max_{w,b}[\min_{i}\frac{c_i(\vec{w}.\vec{x_i}+b)}{||\vec{w}||}]
 = max_{w,b}[\min_{i}\frac{1}{||\vec{w}||}]
 = max_{w,b}\frac{1}{||\vec{w}||}
-\Longleftrightarrow$
+\Longleftrightarrow
 \min_{w,b}\frac{1}{2}||\vec{w}||^2
 $$
 
-约束$$c_i(\vec{w}.\vec{x_i}+b)\ge1 
+**约束**
+
+$$
+c_i(\vec{w}.\vec{x_i}+b)\ge1 
 $$ 
 
-## 求目标函数极值
 ### 公式2：拉格朗日乘子法
 
 拉格朗日函数
-$$L(\vec{w},b,\alpha) = \frac{1}{2}||\vec{w}||^2 - \sum_{i=1}^{n}\alpha_i(c_i(\vec{w}\vec{x_i}+b)-1)$$
+$$L(w,b,\alpha) = \frac{1}{2}||\vec{w}||^2 - \sum_{i=1}^{n}\alpha_i(c_i(\vec{w}\vec{x_i}+b)-1)$$
 
-则目标函数转化为
+目标函数转化
 $$ 
 \min_{w,b}\frac{1}{2}||\vec{w}||^2
-\Longleftrightarrow$
-min_{w,b}max_{\alpha}L(\vec{w},b,\vec{\alpha})
+\Longleftrightarrow
+min_{w,b}max_{\alpha}L(w,b,\vec{\alpha})
 $$ 
 
-
+## 求目标函数极值
 ### 公式3：对偶函数
 $$
-min_{w,b}max_{\alpha}L(\vec{w},b,\vec{\alpha})
-\Longleftrightarrow$
-max_{\alpha}min_{w,b}L(\vec{w},b,\vec{\alpha})
+min_{w,b}max_{\alpha}L(w,b,\alpha)
+\Longleftrightarrow
+max_{\alpha}min_{w,b}L(w,b,\alpha)
 $$
 
 ### 公式4：偏导 求极值
@@ -125,16 +127,16 @@ $$
 
 $$\frac{\partial L}{\partial w}=0
 \Longrightarrow
-$w^\mathsf{T}=\sum_{i=1}^{n}\alpha_ic_ix_i
+w^\mathsf{T}=\sum_{i=1}^{n}\alpha_ic_ix_i
 $$
 
 $$\frac{\partial L}{\partial b}=0
-\Longrightarrow$ 
+\Longrightarrow
 0=\sum_{i=1}^{n}\alpha_ic_i
 $$ 
 
 ### 将结果代入拉格朗日函数
-$L(\vec{w},b,\alpha) = \frac{1}{2}||\vec{w}||^2 - \sum_{i=1}^{n}\alpha_i(c_i(\vec{w}.\vec{x_i}+b)-1)$
+$L(w,b,\alpha) = \frac{1}{2}||\vec{w}||^2 - \sum_{i=1}^{n}\alpha_i(c_i(\vec{w}\vec{x_i}+b)-1)$
 
 =$\frac{1}{2}\vec{w}\vec{w}^\mathsf{T} + \sum_{i=1}^{n}\alpha_i -b\sum_{i=1}^{n}\alpha_i c_i - \vec{w}\sum_{i=1}^{n}\alpha_i c_i \vec{x_i}$
 
