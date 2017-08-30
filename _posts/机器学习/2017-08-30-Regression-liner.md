@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 回归：线性回归
+title: Regression：线性回归
 category: 机器学习
 tags: SVM
 keywords: Regression 机器学习
@@ -16,6 +16,7 @@ description:
     Logistic Regression 线计算值，经过sigmod映射(sigmod可以理解为概率计算，几何上看)还是线上线下问题
     回归问题：
     XX Linear Regression 得到系数矩阵(a,b,c...w)后，求解(x,y,z...n)的值的问题。
+    而引入惩罚因子，大都可以用拉格朗日乘子解释。
 
 ## 线性回归思想
 <pre><code>
@@ -27,12 +28,21 @@ description:
     > 2.  怎么的f(x)才拟合得好
     > 误差 ： 预测值与真实值的差值 f(x)-y
     > 因为差值有正负，多个差值累加会相互抵消(比如：点a -> f(a)=1,y=0.5 -> 差值0.5，点b -> f(b)=0.5,y=1 -> 差值-0.5,总误差为0，这是不合理的)
-    
-    > 3.平分误差: sum([y-f(x)]^2)
+
 </code></pre>
 
-### 目标函数
+## 推导
+既然用误差不合理，通常用平方差来评估f(x)的好坏 
+
+### 损失函数
 $$ 
-min_{w}\sum_{i=1}^{n}(y_i - f(x_i) )^2
+J(w) = \frac{1}{2}\sum_{i=1}^{n}(y_i - wx_i)^2
 $$
+
+## 最小二乘法
+### 偏导
+
+## 批量梯度下降法
+
+## 随机梯度下降法
 
